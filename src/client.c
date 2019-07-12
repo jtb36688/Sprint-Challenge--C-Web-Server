@@ -45,6 +45,10 @@ urlinfo_t *parse_url(char *url)
     6. Overwrite the colon with a '\0' so that we are just left with the hostname.
   */
 
+  path = strchr(hostname, "/");
+  urlinfo->path = path + 1;
+  
+
   ///////////////////
   // IMPLEMENT ME! //
   ///////////////////
